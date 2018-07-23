@@ -143,7 +143,7 @@ def Tick():
         online = 1
     else:
         global online
-        online = 1
+        online = 0
         
     if time.time() > t + MySettings.Delay:
        
