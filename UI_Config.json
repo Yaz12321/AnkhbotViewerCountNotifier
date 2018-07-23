@@ -1,0 +1,25 @@
+﻿{
+  "output_file": "settings.json",
+    "OnlyLive": {
+    "type": "checkbox",
+    "value": true,
+  	"label": "Only when live",
+    "tooltip": "Command is only active when stream is live",
+  	"group": "General"
+  },
+    "count": {
+    "type": "textbox",
+    "value": "(25,50,100)",
+  	"label": "Counts to be notified on",
+    "tooltip": " The viewer counts you want to get notified on. \r\n Insert in parentheses, separate by comma",
+  	"group": "General"
+  },
+    "Delay": {
+    "type": "numberbox",
+    "value": 2,
+    "label": "Check every (minute)",
+    "tooltip": "",
+    "group": "General"
+  },
+
+}
