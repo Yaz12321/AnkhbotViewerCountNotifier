@@ -70,8 +70,8 @@ def Init():
     n = 0
     global trigger
     trigger = 1
-    global online
-    online = 0
+    global wasonline
+    wasonline = False
 
     # End of Init
     return
@@ -106,7 +106,7 @@ def Check():
 
 
     if startCheck:
-        if trigger == 1 and online == 1:
+        if trigger == 1:
             VC = Parent.GetViewerList()
             count = literal_eval(MySettings.count)
 
@@ -125,27 +125,30 @@ def Check():
         t = time.time()
 
     return
-
-def ScriptToggled(status):
+def Reset():
     global t
     t = time.time()
     global n
     n = 0
     global trigger
     trigger = 1
-    global online
-    online = 0
+    global wasonline
+    wasonline = False
+    return
+
+def ScriptToggled(status):
+    Reset()
+
     return
 
 def Tick():
     if Parent.IsLive():
-        global online
-        online = 1
-    else:
-        global online
-        online = 0
-        
-    if time.time() > t + MySettings.Delay:
+        global wasonline
+        wasonline = True
+    elif wasonline:
+        Reset()
+            
+    if time.time() > t + MySettings.Delay*60:
        
         Check()
     return
