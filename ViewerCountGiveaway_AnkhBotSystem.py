@@ -148,7 +148,7 @@ def Tick():
     elif wasonline:
         Reset()
             
-    if time.time() > t + MySettings.Delay*60:
+    if time.time() > t + MySettings.Delay:
        
         Check()
     return

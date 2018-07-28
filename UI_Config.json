@@ -16,8 +16,8 @@
   },
     "Delay": {
     "type": "numberbox",
-    "value": 2,
-    "label": "Check every (minute)",
+    "value": 30,
+    "label": "Check every (seconds)",
     "tooltip": "",
     "group": "General"
   },
