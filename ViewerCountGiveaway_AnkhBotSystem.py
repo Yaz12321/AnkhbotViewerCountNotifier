@@ -1,7 +1,7 @@
 #---------------------------------------
 #	Import Libraries
 #---------------------------------------
-import clr, sys, json, os, codecs, time
+import clr, sys, json, os, codecs, time, winsound
 clr.AddReference("IronPython.SQLite.dll")
 clr.AddReference("IronPython.Modules.dll")
 from ast import literal_eval
@@ -113,7 +113,9 @@ def Check():
             if len(VC) > count[n]:
                 global n
                 Parent.SendStreamWhisper(Parent.GetChannelName().lower(),"Viewer Count: {}".format(count[n]))
-                
+                #winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
+                path = os.path.dirname(os.path.abspath(__file__))
+                winsound.PlaySound('{}/countalert'.format(path),winsound.SND_FILENAME|winsound.SND_ASYNC)
                 global n
                 n = n + 1
 
