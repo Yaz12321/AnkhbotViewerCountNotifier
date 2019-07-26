@@ -3,3 +3,6 @@ A script for Streamlabs Chatbot: notifies you when you reach certain viewer coun
 
 
 NOTE: Viewer count readings are not accurate on this version. A newer version is available but not ready to be published. Contact me to get the newer version.
+
+
+Check out more of my scripts: https://github.com/Yaz12321?tab=repositories
